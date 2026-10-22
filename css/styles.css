@@ -1,0 +1,1447 @@
+/* === GENERAL CSS STYLES ========================================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  -webkit-text-size-adjust: none;
+}
+
+@font-face {
+    font-family: 'navigation';
+    src: url('../fonts/navigation.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'buttons';
+    src: url('../fonts/buttons.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'titles';
+    src: url('../fonts/titles.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* NOVO PRA TORNA FONTES LOCAIS */
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+/* */
+
+a {
+  color: #900;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+/* === GENERAL SITE STYLES ========================================================================= */
+body {
+  font-size: 18px;
+  color: #333;
+  background: #081017;
+  background: #000000 url("../images/bg-body.jpg") center top;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: 'Open Sans', sans-serif;
+  color: #ffffff;
+}
+
+.wrapper {
+  width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.content {
+  overflow: hidden;
+  padding-bottom: 30px;
+}
+
+.title {
+  font-family: 'titles';
+  font-weight: normal;
+  line-height: 30px;
+}
+
+.title span {
+  display: none;
+}
+
+.button {
+  font-family: 'buttons';
+  color: #fff;
+  text-decoration: none;
+  background: #ac141a;
+  padding: 10px 30px;
+  display: inline-block;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  transition: background 0.3s ease-out;
+}
+
+.button:hover {
+  background: #cc0000;
+}
+
+/* === HEADER ========================================================================= */
+header h1 {
+  width: 203px;
+  height: 116px;
+  float: left;
+  margin-left: 115px;
+}
+
+header h1 a {
+  display: block;
+  width: 203px;
+  height: 116px;
+  background: url("../images/logo.png");
+}
+
+header h1 span {
+  display: none;
+}
+
+.header-top {
+  width: 956px;
+  height: 116px;
+  margin: 0 auto;
+  background: url("../images/bg-header.png") no-repeat;
+}
+
+.main-menu ul li {
+  float: left;
+}
+
+.main-menu ul li a {
+  font-family: 'navigation';
+  font-size: 13px;
+  height: 54px;
+  text-transform: uppercase;
+  color: #89a4b3;
+  padding: 2px 8px 0 8px;
+  display: block;
+  text-decoration: none;
+  transition: color 0.3s ease-out;
+  line-height: 54px;
+  position: relative;
+}
+
+.main-menu ul li a:hover {
+  color: #fff;
+}
+
+.main-menu ul li a:after {
+  content: '';
+  display: inline-block;
+  width: 2px;
+  height: 12px;
+  position: absolute;
+  right: 0;
+  top: 21px;
+  background: #113041;
+}
+
+.main-menu ul li#menu-item-149 a:after,
+.main-menu ul li#menu-item-152 a:after {
+  display: none;
+}
+
+.main-menu ul li.current_page_item,
+.main-menu ul li.current-page-ancestor,
+.main-menu ul li.current_page_parent {
+  background: url("../images/menu-active.png") center top no-repeat;
+}
+
+.main-menu ul li.current_page_item a,
+.main-menu ul li.current-page-ancestor a,
+.main-menu ul li.current_page_parent a {
+  color: #ac141a;
+}
+
+.main-menu ul li#menu-item-149 {
+  display: none;
+}
+
+.main-menu ul#logged li a {
+  padding-left: 10px;
+  color: #ff9c00;
+}
+
+.main-menu ul#logged li a:after {
+  display: none;
+}
+
+.main-menu ul#logged li a:before {
+  content: '';
+  display: inline-block;
+  width: 2px;
+  height: 12px;
+  position: absolute;
+  left: 0;
+  top: 21px;
+  background: #113041;
+}
+
+.logged-in ul li#menu-item-149 {
+  display: list-item;
+}
+
+.logged-in ul li#menu-item-152 {
+  display: none;
+}
+
+/* === FOOTER ========================================================================= */
+footer {
+  text-align: center;
+}
+
+footer h3 {
+  display: none;
+}
+
+footer #text-3, footer #gform_widget-2 {
+  display: none;
+}
+
+footer .unreal {
+  width: 75px;
+  height: 80px;
+  background: url("../images/icon-unreal.png");
+  display: inline-block;
+  margin: 0 20px 0 70px;
+}
+
+footer .elastic {
+  width: 101px;
+  height: 80px;
+  background: url("../images/icon-elastic.png");
+  display: inline-block;
+  margin: 0 20px;
+}
+
+footer .steam {
+  width: 148px;
+  height: 80px;
+  display: inline-block;
+  background: url("../images/icon-steam.png");
+  margin: 0 20px;
+}
+
+footer .links {
+  width: 958px;
+  height: 50px;
+  margin: 10px auto 0;
+  background: url("../images/bg-footer.png");
+  border-left: solid 1px #323639;
+  border-right: solid 1px #323639;
+  font-size: 10px;
+  font-family: 'Open Sans';
+  color: #909090;
+  text-align: center;
+}
+
+footer .links a {
+  color: #909090;
+  text-decoration: none;
+  transition: color 0.3s ease-out;
+}
+
+footer .links a:hover {
+  color: #fff;
+}
+
+footer .links li {
+  display: inline-block;
+  line-height: 50px;
+  padding-left: 10px;
+}
+
+footer .links li:after {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  margin-left: 10px;
+  background: #393939;
+  position: relative;
+  top: 3px;
+}
+
+footer .links li:last-child:after {
+  display: none;
+}
+
+/* === HOME PAGE STYLES ========================================================================= */
+.home .wrapper {
+  background: url("../images/bg-home.jpg") center top no-repeat;
+}
+
+.home header {
+  height: 425px;
+}
+
+.home .content {
+  height: 1288px;
+}
+
+.home-logo {
+  clear: both;
+  width: 165px;
+  height: 97px;
+  background: url("../images/home-logo.png");
+  margin: 10px 0 0 260px;
+}
+
+.home-title {
+  width: 119px;
+  height: 26px;
+  margin: 20px 0 0 283px;
+  background: url("../images/how-long-can-you-survive.png");
+}
+
+.home-video {
+  width: 169px;
+  height: 96px;
+  display: block;
+  margin: 30px 0 0 260px;
+  background: url("../images/home-video.png");
+}
+
+.home-content {
+  width: 645px;
+  float: left;
+}
+
+.home-block {
+  width: 565px;
+  height: 280px;
+  padding: 40px 200px 0 65px;
+  float: right;
+  position: relative;
+}
+
+.home-block img.back {
+  position: absolute;
+  z-index: 10;
+}
+
+.home-block .block-content {
+  position: relative;
+  z-index: 20;
+}
+
+.home-block .title {
+  margin-bottom: 5px;
+}
+
+.home-block p {
+  font-size: 11px;
+  line-height: 13px;
+  margin-bottom: 20px;
+  width: 190px;
+}
+
+.block-characters,
+.block-more {
+  padding: 40px 50px 0 230px;
+}
+
+.block-characters .title,
+.block-characters p,
+.block-characters a,
+.block-more .title, .block-more p, .block-more a {
+  float: right;
+  text-align: right;
+}
+
+.block-game h2 {
+  width: 246px;
+  height: 52px;
+  background: url("../images/home-game.png");
+}
+
+.block-game p {
+  color: #7b93a8;
+}
+
+.block-characters {
+  padding-top: 30px;
+}
+
+.block-characters h2 {
+  width: 217px;
+  height: 51px;
+  background: url("../images/home-characters.png");
+}
+
+.block-characters p {
+  width: 200px;
+  color: #d8e4b2;
+}
+
+.block-locations h2 {
+  width: 192px;
+  height: 51px;
+  background: url("../images/home-locations.png");
+}
+
+.block-locations p {
+  color: #ffffff;
+}
+
+.block-more {
+  padding-top: 80px;
+  padding-right: 70px;
+}
+
+.block-more h2 {
+  width: 161px;
+  height: 23px;
+  background: url("../images/home-more.png");
+}
+
+.block-more p {
+  color: #d8e4b2;
+}
+
+.video-overlay {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  z-index: 30;
+}
+
+.video-modal {
+  position: fixed;
+  left: 50%;
+  top: 80px;
+  width: 752px;
+  height: 423px;
+  margin-left: -376px;
+  z-index: 31;
+  background: #000000;
+  display: none;
+  border: solid 1px #606060;
+}
+
+.video-close {
+  position: fixed;
+  left: 50%;
+  top: 66px;
+  width: 30px;
+  height: 30px;
+  margin-left: 360px;
+  border-radius: 30px;
+  border: solid 2px #ffffff;
+  background: #000;
+  color: #ffffff;
+  text-align: center;
+  line-height: 25px;
+  z-index: 32;
+  display: none;
+  cursor: pointer;
+  font-family: 'titles';
+  font-size: 20px;
+}
+
+.home-side {
+  margin-top: 50px;
+  width: 235px;
+  float: left;
+  font-size: 9px;
+}
+
+.home-side > div,
+.home-side > img {
+  margin-bottom: 20px;
+}
+
+.home-side .home-community h2 {
+  width: 232px;
+  height: 33px;
+  background: url("../images/home-side-from-the-community.png");
+  margin-left: -10px;
+}
+
+.home-side .blog-excerpt {
+  margin: 10px 0 25px;
+}
+
+.home-side .blog-excerpt h3 {
+  -webkit-font-smoothing: antialiased;
+  line-height: 26px;
+}
+
+.home-side .blog-excerpt a {
+  color: #fff;
+}
+
+.home-side .blog-excerpt .post-date {
+  color: #ac141a;
+  height: 20px;
+  line-height: 16px;
+}
+
+.home-side .blog-excerpt .post-excerpt {
+  color: #89a2b8;
+  margin-bottom: 20px;
+}
+
+.home-side .blog-excerpt .post-excerpt a {
+  display: none;
+}
+
+.home-side .home-subscribe h2 {
+  width: 242px;
+  height: 34px;
+  background: url("../images/home-side-subscribe.png");
+}
+
+.home-side .home-twitter {
+  width: 240px;
+}
+
+.home-side .home-twitter h2 {
+  width: 241px;
+  height: 33px;
+  background: url("../images/home-side-twitter.png");
+  margin-bottom: 10px;
+}
+
+.home-side .kickstarter {
+  width: 145px;
+  height: 137px;
+  display: block;
+  margin: 0 auto;
+}
+
+.home-side .kickstarter img {
+  display: block;
+}
+
+/* === GAME PAGE STYLES ========================================================================= */
+.page-template-page-game .wrapper {
+  background: url("../images/bg-game.jpg") center top no-repeat;
+}
+
+.page-template-page-game header {
+  height: 595px;
+}
+
+.page-template-page-game .content {
+  height: 2060px;
+}
+
+.page-template-page-game .page-content h1 {
+  width: 463px;
+  height: 39px;
+  background: url("../images/game-welcome.png");
+  margin: 0 0 35px 440px;
+}
+
+.page-template-page-game .game-block .title {
+  margin-bottom: 10px;
+}
+
+.page-template-page-game .game-block p {
+  font-size: 11px;
+  line-height: 16px;
+  margin-bottom: 20px;
+  color: #89a2b8;
+}
+
+.page-template-page-game .block-survival {
+  float: right;
+  width: 580px;
+  padding: 0 85px 0 20px;
+  margin-bottom: 65px;
+}
+
+.page-template-page-game .block-survival h2 {
+  width: 233px;
+  height: 21px;
+  background: url("../images/game-survival.png");
+}
+
+.page-template-page-game .block-villain {
+  clear: both;
+  float: right;
+  width: 580px;
+  padding: 0 85px 0 20px;
+  margin-bottom: 65px;
+}
+
+.page-template-page-game .block-villain h2 {
+  width: 360px;
+  height: 28px;
+  background: url("../images/game-villain.png");
+}
+
+.page-template-page-game .block-together {
+  clear: both;
+  padding: 0 150px 0 85px;
+  height: 895px;
+}
+
+.page-template-page-game .block-together img.cast {
+  float: right;
+  margin-left: 60px;
+}
+
+.page-template-page-game .block-together h2 {
+  width: 340px;
+  height: 22px;
+  background: url("../images/game-together.png");
+  margin-top: 60px;
+}
+
+.page-template-page-game .block-together .signup {
+  float: left;
+  width: 320px;
+}
+
+.page-template-page-game .block-together .signup h2 {
+  width: 100%;
+  height: 17px;
+  background: url("../images/game-subscribe.png") center top no-repeat;
+  margin-top: 30px;
+}
+
+.page-template-page-game .block-together .signup #gform_wrapper_1 .top_label input.medium {
+  width: 310px;
+  height: 58px;
+  padding: 0 20px 0 65px;
+  background-color: transparent;
+  background: url("../images/game-signup-input.png") no-repeat;
+}
+
+.page-template-page-game .block-development {
+  clear: both;
+  width: 580px;
+  padding: 0 0 0 85px;
+}
+
+.page-template-page-game .block-development h2 {
+  width: 413px;
+  height: 22px;
+  background: url("../images/game-development.png");
+}
+
+.page-template-page-game .block-development p {
+  width: 350px;
+}
+
+.page-template-page-game .block-development .icons {
+  width: 375px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.page-template-page-game .block-development .icons .unreal {
+  width: 75px;
+  height: 80px;
+  background: url("../images/icon-unreal.png");
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.page-template-page-game .block-development .icons .steam {
+  width: 148px;
+  height: 80px;
+  display: inline-block;
+  background: url("../images/icon-steam.png");
+  margin: 0 20px;
+}
+
+.page-template-page-game .block-development img.featured {
+  margin-top: -40px;
+}
+
+/* === CHARACTER PAGE STYLES ========================================================================= */
+.page-template-page-characters .wrapper {
+  background: url("../images/bg-characters.jpg") center top no-repeat;
+}
+
+.page-template-page-characters header {
+  height: 90px;
+  overflow: hidden;
+}
+
+.page-template-page-characters .content {
+  min-height: 479px;
+  padding-bottom: 0;
+}
+
+.page-template-page-characters .characters {
+  width: 855px;
+  height: 540px;
+  margin-left: 123px;
+  position: relative;
+}
+
+.page-template-page-characters .character-block {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  z-index: 40;
+  font-size: 12px;
+  color: #66727e;
+  padding: 70px 20px 0 355px;
+  display: none;
+}
+
+.page-template-page-characters .character-block h2 {
+  height: 50px;
+}
+
+.page-template-page-characters .character-block h3 {
+  width: 136px;
+  height: 35px;
+  background-repeat: no-repeat;
+}
+
+.page-template-page-characters .character-block .character-type-survivor {
+  background-image: url("../images/title-survivors.png");
+}
+
+.page-template-page-characters .character-block .character-type-killer {
+  background-image: url("../images/title-killers.png");
+}
+
+.page-template-page-characters #character-1 h2 {
+  background: url("../images/title-chad.png") no-repeat;
+}
+
+.page-template-page-characters #character-2 h2 {
+  background: url("../images/title-troy.png") no-repeat;
+}
+
+.page-template-page-characters #character-3 h2 {
+  background: url("../images/title-amber.png") no-repeat;
+}
+
+.page-template-page-characters #character-4 h2 {
+  background: url("../images/title-nick.png") no-repeat;
+}
+
+.page-template-page-characters #character-5 h2 {
+  background: url("../images/title-samantha.png") no-repeat;
+}
+
+.page-template-page-characters #character-6 h2 {
+  background: url("../images/title-slasher.png") no-repeat;
+}
+
+.page-template-page-characters #character-7 h2 {
+  background: url("../images/title-hitter.png") no-repeat;
+}
+
+.page-template-page-characters #character-8 h2 {
+  background: url("../images/title-strangler.png") no-repeat;
+}
+
+.page-template-page-characters .character-description {
+  margin: 10px 0;
+}
+
+.page-template-page-characters .character-selectors {
+  position: absolute;
+  right: 200px;
+  bottom: 150px;
+  z-index: 50;
+  height: 16px;
+}
+
+.page-template-page-characters .character-selectors li {
+  float: left;
+  margin-right: 6px;
+  width: 16px;
+  height: 16px;
+}
+
+.page-template-page-characters .character-selectors a {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: #434343;
+  border-radius: 8px;
+  transition: background 0.2s ease-out;
+}
+
+.page-template-page-characters .character-selectors a.selected {
+  background: #ac141a;
+}
+
+.page-template-page-characters footer {
+  position: relative;
+  z-index: 50;
+  margin-top: -16px;
+}
+
+.page-template-page-characters footer .icons {
+  position: absolute;
+  z-index: 60;
+  left: 50%;
+  margin-top: -80px;
+  margin-left: -250px;
+}
+
+/* === LOCATIONS PAGE STYLES ========================================================================= */
+.page-template-page-locations .wrapper {
+  background: url("../images/bg-locations.jpg") center top no-repeat;
+}
+
+.page-template-page-locations header {
+  height: 410px;
+  overflow: hidden;
+}
+
+.page-template-page-locations .content {
+  height: 1695px;
+}
+
+.page-template-page-locations .content h1.title {
+  width: 200px;
+  height: 136px;
+  background: url("../images/title-faq.png") center top no-repeat;
+  margin: 0 auto;
+}
+
+.page-template-page-locations h2 span,
+.page-template-page-locations h3 span {
+  display: none;
+}
+
+.page-template-page-locations h2 {
+  margin: 5px 0 10px 0;
+}
+
+.page-template-page-locations h3 {
+  width: 77px;
+  height: 16px;
+  background: url("../images/title-locations.png") center top no-repeat;
+}
+
+.page-template-page-locations p {
+  font-size: 12px;
+  color: #66727e;
+}
+
+.page-template-page-locations .locations-block {
+  width: 420px;
+  clear: both;
+  float: left;
+  margin-left: 160px;
+}
+
+.page-template-page-locations .locations-block h2, .page-template-page-locations .locations-block h3, .page-template-page-locations .locations-block p {
+  clear: both;
+}
+
+.page-template-page-locations .block-summercamp {
+  float: left;
+  text-align: left;
+  margin: 0 0 0 120px;
+  width:760px;
+}
+
+.page-template-page-locations .block-summercamp h2, .page-template-page-locations .block-summercamp h3, .page-template-page-locations .block-summercamp p {
+  float: left;
+}
+
+.page-template-page-locations .block-summercamp p {
+}
+
+.page-template-page-locations .block-summercamp h2 {
+  width: 284px;
+  height: 36px;
+  background: url("../images/title-summer-camp.png") no-repeat;
+}
+
+.page-template-page-locations .block-highschool {
+  margin-bottom: 410px;
+  margin-right:70px;
+  float:right;
+  width:635px;
+}
+
+.page-template-page-locations .block-highschool h2,
+.page-template-page-locations .block-highschool h3,
+.page-template-page-locations .block-highschool p {
+  float:right;
+  clear:both;
+  text-align:right;
+}
+
+.page-template-page-locations .block-highschool p {
+  text-shadow:1px 1px #000000;
+}
+
+.page-template-page-locations .block-highschool h2 {
+  width: 268px;
+  height: 35px;
+  background: url("../images/title-high-school.png") center top no-repeat;
+}
+
+.page-template-page-locations .block-suburbs {
+  float: right;
+  text-align: right;
+  margin: 0 120px 460px 0;
+  width:650px;
+}
+
+.page-template-page-locations .block-suburbs h2, .page-template-page-locations .block-suburbs h3, .page-template-page-locations .block-suburbs p {
+  float: right;
+}
+
+.page-template-page-locations .block-suburbs h2 {
+  width: 210px;
+  height: 36px;
+  background: url("../images/title-suburbs.png") center top no-repeat;
+}
+
+.page-template-page-locations .block-mall {
+  margin-bottom:400px;
+  width:650px;
+}
+
+.page-template-page-locations .block-mall h2 {
+  width: 156px;
+  height: 36px;
+  background: url("../images/title-mall.png") center top no-repeat;
+}
+
+
+/* === MEDIA PAGE STYLES ========================================================================= */
+.page-template-page-media .wrapper {
+  background: url("../images/bg-media.jpg") center top no-repeat;
+}
+
+.page-template-page-media header {
+  height: 500px;
+  overflow: hidden;
+}
+
+.page-template-page-media .content {
+  min-height: 1435px;
+  margin-bottom: 15px;
+}
+
+.page-template-page-media .video-embed {
+  margin:0 auto;
+  width:623px;
+  height:360px;
+  background: url("../images/video-border.png");
+  padding:16px 0 0 19px;
+}
+
+.page-template-page-media .video-embed .video {
+  background:#c0c0c0;
+  width:584px;
+  height:328px;
+}
+
+.page-template-page-media .gallery {
+  margin:20px auto;
+  width:622px;
+  height:515px;
+  background: url("../images/gallery-border.png");
+  padding:15px 11px;
+}
+
+.page-template-page-media .gallery .envira-gallery-link {
+  width:290px;
+  height:155px;
+  margin:0 auto;
+}
+
+.page-template-page-media .gallery .envira-gallery-image {
+  width:290px;
+  height:155px;
+}
+
+.page-template-page-media .fancybox-title {
+  display:none;
+}
+
+.page-template-page-media .fancybox-skin {
+  background:#000000;
+}
+
+
+/* === FAQ PAGE STYLES ========================================================================= */
+.page-template-page-faq .wrapper {
+  background: url("../images/bg-faq.jpg") center top no-repeat;
+}
+
+.page-template-page-faq header {
+  height: 90px;
+  overflow: hidden;
+}
+
+.page-template-page-faq .content {
+  min-height: 1018px;
+  margin-bottom: 15px;
+}
+
+.page-template-page-faq .content h1.title {
+  width: 200px;
+  height: 136px;
+  background: url("../images/title-faq.png") center top no-repeat;
+  margin: 0 auto;
+}
+
+.page-template-page-faq .faq-entry {
+  font-size: 14px;
+  width: 615px;
+  margin: 25px auto 0;
+}
+
+.page-template-page-faq .faq-entry h2 {
+  margin-bottom: 5px;
+}
+
+.page-template-page-faq .faq-entry h2 span {
+  display: none;
+}
+
+.page-template-page-faq .faq-entry:before {
+  content: '';
+  display: block;
+  width: 615px;
+  height: 23px;
+  background: url("../images/faq-top.png");
+}
+
+.page-template-page-faq .faq-entry:after {
+  content: '';
+  display: block;
+  width: 615px;
+  height: 20px;
+  background: url("../images/faq-bottom.png");
+}
+
+.page-template-page-faq .faq-entry .faq-arrow {
+  background-position: 0 0;
+}
+
+.page-template-page-faq .faq-entry.open .faq-arrow {
+  background-position: 0 -24px;
+}
+
+.page-template-page-faq .faq-arrow {
+  float: right;
+  width: 24px;
+  height: 24px;
+  background: url("../images/faq-arrow.png");
+}
+
+.page-template-page-faq .faq-question {
+  padding-left: 35px;
+  padding-right: 35px;
+  background: #000;
+}
+
+.page-template-page-faq .faq-question h2 {
+  width: 90px;
+  height: 18px;
+  background: url("../images/faq-question.png");
+}
+
+.page-template-page-faq .faq-answer {
+  padding: 15px 35px 20px 35px;
+  background: #000;
+  color: #89a2b8;
+  display: none;
+}
+
+.page-template-page-faq .faq-answer h2 {
+  width: 76px;
+  height: 18px;
+  background: url("../images/faq-answer.png");
+}
+
+.page-template-page-faq .faq-answer:before {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #0d2d43;
+  display: block;
+  margin-bottom: 15px;
+}
+
+/* === COMMUNITY PAGE STYLES ========================================================================= */
+.blog .wrapper,
+.single .wrapper,
+.page-template-page-community-videos .wrapper,
+.page-template-page-community-images .wrapper {
+  background: url("../images/bg-community.jpg") center top no-repeat;
+  background-attachment: fixed;
+}
+
+.blog .content,
+.single .content,
+.page-template-page-community-videos .content,
+.page-template-page-community-images .content {
+  /* height:2060px; */
+}
+
+.blog #menu-item-149,
+.single #menu-item-149,
+.page-template-page-community-videos #menu-item-149,
+.page-template-page-community-images #menu-item-149 {
+  background: url("../images/menu-active.png") center top no-repeat;
+}
+
+.blog #menu-item-149 a,
+.single #menu-item-149 a,
+.page-template-page-community-videos #menu-item-149 a,
+.page-template-page-community-images #menu-item-149 a {
+  color: #ac141a;
+}
+
+.blog .latest {
+  display: none;
+}
+
+.blog .latest:nth-of-type(1) {
+  display: block;
+}
+
+.blog .blog-excerpt:nth-of-type(1) {
+  display: none;
+}
+
+.community-icons {
+  width: 808px;
+  margin: 0 auto 60px;
+}
+
+.community-icons a {
+  display: block;
+  float: left;
+  margin: 0 25px;
+}
+
+.community-icons .blog {
+  width: 221px;
+  height: 108px;
+  background: url("../images/icon-dev-blog.png") center top no-repeat;
+}
+
+.community-icons .images {
+  width: 214px;
+  height: 114px;
+  background: url("../images/icon-images.png") center top no-repeat;
+}
+
+.community-icons .videos {
+  width: 223px;
+  height: 105px;
+  background: url("../images/icon-videos.png") center top no-repeat;
+}
+
+.community-restricted {
+  width: 700px;
+  margin: 0 auto 50px;
+  color: #89a4b3;
+  text-align: center;
+}
+
+.community-restricted p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.community-restricted .gform_wrapper {
+  width: 300px;
+  margin: 30px auto;
+}
+
+.community-restricted .gform_confirmation_message_1 {
+  font-size: 30px;
+  padding: 0;
+  color: #ac141a;
+  font-family: 'titles';
+}
+
+.blog-post {
+  width: 585px;
+  float: left;
+  margin-left: 115px;
+  padding-bottom: 30px;
+}
+
+.blog-post .post-title {
+  line-height: 36px;
+}
+
+.blog-post .post-date {
+  font-size: 13px;
+  margin: 5px 0 15px;
+  color: #ac141a;
+}
+
+.blog-post .post-content {
+  font-size: 11px;
+  color: #89a2b8;
+}
+
+.blog-post .post-content p {
+  margin-bottom: 15px;
+}
+
+.blog-post .post-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.all-posts {
+  width: 232px;
+  float: left;
+  margin-left: 25px;
+  font-size: 9px;
+}
+
+.all-posts h2 {
+  width: 232px;
+  height: 33px;
+  background: url("../images/blog-side-previous.png");
+  margin-left: -10px;
+}
+
+.all-posts .blog-excerpt {
+  margin: 10px 0 25px;
+}
+
+.all-posts .blog-excerpt h3 {
+  -webkit-font-smoothing: antialiased;
+  line-height: 26px;
+}
+
+.all-posts .blog-excerpt a {
+  color: #fff;
+}
+
+.all-posts .blog-excerpt .post-date {
+  color: #ac141a;
+  height: 20px;
+  line-height: 16px;
+}
+
+.all-posts .blog-excerpt .post-excerpt {
+  color: #89a2b8;
+  margin-bottom: 20px;
+}
+
+.all-posts .blog-excerpt .post-excerpt a {
+  display: none;
+}
+
+.page-template-page-community-images .community-content {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.page-template-page-community-images .community-content h1 {
+  font-family: 'titles';
+  text-align: center;
+  font-size: 60px;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+.page-template-page-community-images .community-content .envira-gallery-image {
+  border: solid 1px #c0c0c0;
+  margin-bottom: 20px;
+}
+
+.page-template-page-community-videos .community-content {
+  width: 752px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.page-template-page-community-videos .community-content h1 {
+  font-family: 'titles';
+  text-align: center;
+  font-size: 60px;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+.page-template-page-community-videos .community-content iframe {
+  border: solid 1px #c0c0c0;
+  margin: 15px 0 25px;
+}
+
+/* === CONTENT PAGE STYLES ========================================================================= */
+.page-template-page-content .wrapper {
+  background: url("../../../../../../../20170606035951im_/http_/www.lastyearthegame.com/wp-content/themes/last%20year/images/bg-content.gif") center top no-repeat;
+}
+
+.page-template-page-content header {
+  height: 100px;
+  overflow: hidden;
+}
+
+.page-template-page-content .content {
+  padding-left: 90px;
+  padding-right: 70px;
+}
+
+.page-template-page-content .content h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-template-page-content .content p, .page-template-page-content .content li {
+  font-size: 12px;
+  color: #89a2b8;
+  text-align: justify;
+  margin-bottom: 10px;
+}
+
+.page-template-page-content .content li {
+  font-size: 14px;
+  color: #fff;
+  list-style-type: decimal;
+}
+
+.page-template-page-content .content strong {
+  color: #fff;
+  font-size: 14px;
+}
+
+/* === EMAIL SIGNUP FORM ========================================================================= */
+#gform_wrapper_1 .validation_error {
+  font-weight: normal;
+  color: #ac141a;
+  border: 0;
+  padding: 0;
+  font-size: 11px;
+}
+
+#gform_wrapper_1 .ginput_container {
+  margin: 0;
+}
+
+#gform_wrapper_1 label {
+  display: none;
+}
+
+#gform_wrapper_1 .top_label input.medium {
+  width: 100%;
+  height: 52px;
+  line-height: 52px;
+  padding: 0 0 0 52px;
+  background: #1e2730 url("../images/email-icon.png") 8px 13px no-repeat;
+  color: #ffffff;
+  border: 0;
+  font-size: 12px;
+}
+
+#gform_wrapper_1 .gform_footer {
+  padding-top: 0;
+}
+
+#gform_wrapper_1 .gform_footer input {
+  border: 0;
+  font-family: 'buttons';
+  color: #fff;
+  text-decoration: none;
+  background: #ac141a;
+  padding: 10px 30px;
+  display: inline-block;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  transition: background 0.3s ease-out;
+}
+
+#gform_wrapper_1 .gform_footer input:hover {
+  background: #cc0000;
+}
+
+#gform_wrapper_1 li.gfield.gfield_error {
+  background: transparent;
+  border: 0 !important;
+  padding: 0 !important;
+  margin: 0;
+  width: 100%;
+}
+
+#gform_wrapper_1 .validation_message {
+  font-size: 12px;
+  margin: 0;
+  padding: 10px 0 0 0 !important;
+  font-weight: normal;
+}
+
+.gform_confirmation_message_1 {
+  font-size: 13px;
+  padding: 5px;
+}
